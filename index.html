@@ -6,7 +6,7 @@
 <meta name="description" content="Pad de estudo para bateristas: 40 rudimentos, mais de 50 grooves e estúdio de viradas. Sem login, sem servidor.">
 <title>Baqueta Livre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@600;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
 /* Layout: app de pad de estudo em coluna única (até 860px) com barra de abas fixa embaixo.
    Visual de case de turnê: condensada em caixa alta para rótulos e BPM, superfícies planas com borda fina,
@@ -16,7 +16,7 @@
   --fg:#14181c; --mute:#56626e; --accent:#a35f0f; --accent-ink:#ffffff;
   --R:#0b8276; --L:#bf2f4d; --on-hand:#ffffff;
   --c-cr:#7c3aed; --c-rd:#1d6fd1; --c-hh:#16864a; --c-cx:#d4600c; --c-bu:#c42b2b;
-  --disp:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --disp:'Big Shoulders Display','Roboto Condensed','Arial Narrow',sans-serif;
   --body:'Archivo',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
 }
@@ -36,7 +36,7 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--bg);color:var(--fg);font:15px/1.45 var(--body);-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--fg);font:15px/1.45 var(--body);font-synthesis:none;-webkit-tap-highlight-color:transparent}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
@@ -45,14 +45,14 @@ button{cursor:pointer}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
 .brand svg{flex:none;width:38px;height:38px;color:var(--accent)}
-.brand h1{margin:0;font:800 30px/1 var(--disp);letter-spacing:.04em;text-transform:uppercase}
+.brand h1{margin:0;font:700 30px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
 .brand p{margin:3px 0 0;color:var(--mute);font-size:13px}
 .icon-btn{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center}
 .icon-btn svg{width:20px;height:20px}
 
-h2{margin:0;font:800 26px/1.05 var(--disp);letter-spacing:.05em;text-transform:uppercase;text-wrap:balance}
+h2{margin:0;font:700 26px/1.1 var(--disp);letter-spacing:.07em;text-transform:uppercase;text-wrap:balance}
 .sub{margin:4px 0 0;color:var(--mute)}
-.label{font:700 12px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.label{font:700 11px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .sec{margin-top:22px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .row.between{justify-content:space-between}
@@ -68,7 +68,7 @@ h2{margin:0;font:800 26px/1.05 var(--disp);letter-spacing:.05em;text-transform:u
 
 .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-top:12px}
 .card{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 14px;min-width:0}
-.card .n{flex:none;width:38px;font:800 30px/1 var(--disp);color:var(--accent);text-align:center}
+.card .n{flex:none;width:38px;font:700 30px/1 var(--disp);color:var(--accent);text-align:center}
 .card .t{min-width:0}
 .card .t b{display:block;font-weight:600;overflow-wrap:anywhere}
 .card .t span{display:block;color:var(--mute);font:500 12px/1.5 var(--mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -92,14 +92,14 @@ h2{margin:0;font:800 26px/1.05 var(--disp);letter-spacing:.05em;text-transform:u
 .tp{display:grid;gap:14px}
 .tp-top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .bpm{display:flex;align-items:baseline;gap:8px}
-.bpm-num{font:800 76px/.9 var(--disp);letter-spacing:.01em;font-variant-numeric:tabular-nums;min-width:2.1ch}
-.bpm small{font:700 13px var(--disp);letter-spacing:.14em;color:var(--mute)}
+.bpm-num{font:700 76px/.9 var(--disp);letter-spacing:.01em;font-variant-numeric:tabular-nums;min-width:2.1ch}
+.bpm small{font:600 12px var(--body);letter-spacing:.1em;color:var(--mute)}
 .play{width:76px;height:76px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
 .play svg{width:34px;height:34px}
 .tp input[type=range]{width:100%;accent-color:var(--accent);height:30px}
 .step-btns{display:flex;gap:8px;flex-wrap:wrap}
 .step-btns .btn{min-width:56px;font-family:var(--mono)}
-.count{min-height:30px;display:flex;align-items:center;gap:10px;font:800 24px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.count{min-height:30px;display:flex;align-items:center;gap:10px;font:700 24px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .count em{font-style:normal;font-size:40px;color:var(--fg)}
 .vols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 18px}
 .vols label{display:grid;gap:2px;font-size:13px;color:var(--mute)}
@@ -111,7 +111,7 @@ h2{margin:0;font:800 26px/1.05 var(--disp);letter-spacing:.05em;text-transform:u
 select{width:100%;min-height:44px;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:8px 10px}
 [hidden]{display:none!important}
 input[type=number]{width:78px;min-height:44px;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:8px 10px;font-family:var(--mono)}
-.clock{font:800 56px/1 var(--disp);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.clock{font:700 56px/1 var(--disp);font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .org{display:grid;gap:12px;margin-top:10px}
 .ramp{display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--mute);font-size:14px}
 .ramp select{width:auto}
@@ -123,8 +123,8 @@ input[type=number]{width:78px;min-height:44px;border:1px solid var(--line);backg
 
 /* grades (grooves e estúdio) */
 .gridwrap{overflow-x:auto;padding:4px 2px 10px;margin:0 -2px}
-.sgrid{display:grid;grid-template-columns:80px repeat(var(--n),34px);gap:4px;align-items:center;width:max-content}
-.sgrid .lab{font:700 12px var(--disp);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);position:sticky;left:0;background:var(--surface);z-index:1;padding:6px 0}
+.sgrid{display:grid;grid-template-columns:92px repeat(var(--n),34px);gap:4px;align-items:center;width:max-content}
+.sgrid .lab{font:600 11px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);position:sticky;left:0;background:var(--surface);z-index:1;padding:6px 0}
 .sgrid .hd{width:34px;text-align:center;font:500 11px var(--mono);color:var(--mute);height:20px;line-height:20px;border-radius:6px}
 .sgrid .b{justify-self:end}
 .sgrid .hd.cur{background:var(--fg);color:var(--bg)}
@@ -157,11 +157,11 @@ textarea{min-height:96px;font:12px/1.4 var(--mono);resize:vertical}
 .empty{border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--mute);margin-top:10px}
 .crumb{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .back{border:1px solid var(--line);background:var(--surface);border-radius:10px;min-height:42px;padding:0 14px;font-weight:600}
-.num{font:800 54px/.9 var(--disp);color:var(--accent)}
+.num{font:700 54px/.9 var(--disp);color:var(--accent)}
 details summary{cursor:pointer;font-weight:600;min-height:36px;display:flex;align-items:center}
 
 .tabs{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;justify-content:center;gap:6px;background:var(--surface);border-top:1px solid var(--line);padding:6px max(10px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px))}
-.tabs button{flex:1;max-width:280px;border:0;background:transparent;border-radius:12px;padding:8px 6px;display:grid;justify-items:center;gap:2px;color:var(--mute);font:700 13px var(--disp);letter-spacing:.12em;text-transform:uppercase;min-height:54px}
+.tabs button{flex:1;max-width:280px;border:0;background:transparent;border-radius:12px;padding:8px 6px;display:grid;justify-items:center;gap:2px;color:var(--mute);font:600 11px var(--body);letter-spacing:.06em;text-transform:uppercase;min-height:54px}
 .tabs button svg{width:24px;height:24px}
 .tabs button[aria-current="page"]{color:var(--accent-ink);background:var(--accent)}
 @media (max-width:420px){.bpm-num{font-size:64px}.play{width:68px;height:68px}}
@@ -334,7 +334,7 @@ function h(tag,a){
 var HAND={r:'D',l:'E'};
 function pad2(n){return n<10?'0'+n:''+n}
 // Colunas da grade: 34px por passo; a coluna que abre cada tempo ganha 6px extras (a célula alinha à direita).
-function gcols(n,div){ var c=['80px']; for(var i=0;i<n;i++) c.push(i>0&&i%div===0?'40px':'34px'); return c.join(' '); }
+function gcols(n,div){ var c=['92px']; for(var i=0;i<n;i++) c.push(i>0&&i%div===0?'40px':'34px'); return c.join(' '); }
 
 /* ---------- Áudio ---------- */
 var Eng=(function(){
