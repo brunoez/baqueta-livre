@@ -628,7 +628,7 @@ function figSvg(v){
   return '<svg viewBox="0 0 '+w+' 40" width="'+Math.round(w*.8)+'" height="32" focusable="false">'+s+'</svg>';
 }
 function figIcon(v){ var s=document.createElement('span'); s.className='figico'; s.setAttribute('aria-hidden','true'); s.innerHTML=figSvg(v); return s; }
-var Rs={cat:'all',sel:null,fig:null,bpm:0};
+var Rs={cat:'all',sel:null,fig:2,bpm:0};
 // Figuras: [toques por tempo, nome, descrição]. O BPM conta semínimas (1 tempo).
 var FIGS=[
   [0.25,'Semibreve','1 toque a cada 4 tempos'],
